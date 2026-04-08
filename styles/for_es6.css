@@ -1,0 +1,111 @@
+header {
+    height: 63px; max-width: 1440px; min-width: 720px;
+    margin: 0 auto; background-color: skyblue;
+    display: flex;  flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .m_nav_open {}
+/* 전체메뉴클릭시 열리는 메뉴 */
+header .m_bg {
+    display: none;
+    position: fixed; left:0; top:0; z-index: 888;
+    width: 100%; height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+}
+header .m_bg .m_side_wrap {
+    background: #322826;
+    height: 100vh; max-width:450px; min-width: 320px;
+}
+header .m_bg .m_side_wrap a,
+header .m_bg .m_side_wrap * {color: #fefcf5;}
+header .m_bg .m_side_wrap .top {display: flex; padding: 20px 0 0 20px; gap:20px}
+header .m_bg .m_side_wrap .top .close {}
+header .m_bg .m_side_wrap .top h1 {}
+header .m_bg .m_side_wrap .top h1 a {}
+header .m_bg .m_side_wrap .m_nav {}
+header .m_bg .m_side_wrap .user_menu {
+    display: flex; flex-flow: row nowrap;
+}
+header .m_bg .m_side_wrap .user_menu .login_cart {}
+header .m_bg .m_side_wrap .user_menu .bookmark {}
+header .m_bg .m_side_wrap .m_nav {}
+header .m_bg .m_side_wrap .m_nav .gnb {}
+header .m_bg .m_side_wrap .m_nav .gnb > li {
+    display: flex; flex-flow: column nowrap;
+    padding: 15px 20px;
+    position: relative;
+}
+header .m_bg .m_side_wrap .m_nav .gnb > li::after {
+    position: absolute; right: 20px; top:20px;
+    content: ''; display: block; width: 12px; height: 12px;
+    background:url(https://cdn-icons-png.flaticon.com/128/6423/6423875.png);
+    background-size: 12px; filter: invert(1);
+}
+header .m_bg .m_side_wrap .m_nav .gnb > li > a {
+}
+header .m_bg .m_side_wrap .m_nav .gnb > li > .lnb {
+    margin: 15px 0 0 15px;
+    height: 0; overflow: hidden; /* 애니메이션용 높이값 0 */
+}
+header .m_bg .m_side_wrap .m_nav .gnb > li > .lnb > li {
+}
+header .m_bg .m_side_wrap .m_nav .gnb > li > .lnb > li > a {
+    font-size: 0.65rem; font-weight: 300; line-height: 1.5;
+}
+header .m_bg .m_side_wrap .user_menu {}
+header .m_bg .m_side_wrap .user_menu > .login_cart {
+    width: 30px;
+}
+header .m_bg .m_side_wrap .user_menu > .login_cart img {
+    filter: invert(1);
+    width: 100%;
+}
+header .m_bg .m_side_wrap .user_menu > .login_cart span {}
+header .m_bg .m_side_wrap .user_menu > .bookmark {}
+header .m_bg .m_side_wrap .user_menu > .bookmark img {}
+header .m_bg .m_side_wrap .user_menu > .bookmark span {}
+/* 우측메뉴(desktop~tablet) */
+header .right_menu {
+    display: flex; flex-flow: row nowrap; align-items: center;
+}
+header .right_menu nav {
+    margin-right: 30px;
+    /* nav+login_cart 사이 여백 */
+}
+header .right_menu nav .gnb {
+    display: flex; flex-flow: row nowrap;
+}
+header .right_menu nav .gnb li {
+    position: relative;
+    margin-right: 30px;
+}
+header .right_menu nav .gnb li:last-child {
+    margin-right: 0px;
+}
+header .right_menu nav .gnb li a {
+    line-height: 63px; display: block;
+}
+header .right_menu nav .gnb li .lnb {
+    display: none;
+    position:absolute;
+    background: #322826;
+    width: max-content;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 7px;
+    left:50%; transform: translateX(-50%);
+}
+header .right_menu nav .gnb li .lnb li {margin-bottom: 15px;}
+header .right_menu nav .gnb li .lnb li:last-child {margin: 0px;}
+header .right_menu nav .gnb li .lnb li a {color: hsl(0, 0%, 100%)}
+header .right_menu .login_cart {display: flex; gap: 8px}
+header .right_menu .login_cart > * {width: 24px;}
+header .right_menu .login_cart > * img {width: 100%;}
+header .right_menu .login_cart > * span {display: none;}
+header .right_menu .login_cart .login {}
+header .right_menu .login_cart .login img {}
+header .right_menu .login_cart .login span {}
+header .right_menu .login_cart .cart {}
+header .right_menu .login_cart .cart img {}
+header .right_menu .login_cart .cart span {}
