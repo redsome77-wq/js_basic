@@ -1,0 +1,51 @@
+/* scroll-2.css */
+#fixed_group {
+    position: fixed; right: 50px; bottom: 50px;
+}
+#fixed_group a {
+    display: block; width: 70px; height: 70px; border-radius: 50%;
+    text-align: center; line-height: 70px;
+    font-size: 0.85rem;
+}
+#fixed_group .recent {
+    background: #222; color: #fff;
+}
+#fixed_group .top {
+    background: #fff; color: #222;
+}
+#wrap {background: #f5f5f5;}
+#wrap > * {
+    max-width: 1440px; min-width: 1024px; margin: 0 auto;
+}
+#wrap header {}
+#wrap header.scroll {
+    position: sticky; top:0;
+    display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;
+    border-bottom: 2px #222 solid;
+}
+#wrap header.scroll .top{
+    border-bottom: 0;
+}
+#wrap header .top {
+    display: block;
+    height: 50px;
+    border-bottom: 2px #222 solid;
+}
+#wrap header .top h1 {
+    line-height: 50px;
+}
+#wrap header .bottom {
+    height: 40px;
+}
+#wrap header .bottom .gnb {
+    display: flex;  flex-flow: row nowrap; gap:20px;
+}
+#wrap header .bottom .gnb li {}
+#wrap header .bottom .gnb li a {
+    line-height: 40px; display: block;
+}
+#wrap main {
+    height: 500vh;
+    background: linear-gradient(white, beige, brown)
+}
+#wrap footer {}
